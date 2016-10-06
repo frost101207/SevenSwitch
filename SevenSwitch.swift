@@ -25,7 +25,7 @@
 import UIKit
 import QuartzCore
 
-@IBDesignable @objc public class SevenSwitch: UIControl {
+@IBDesignable @objc open class SevenSwitch: UIControl {
     
     // public
     
