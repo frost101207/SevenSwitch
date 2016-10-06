@@ -284,7 +284,7 @@ import QuartzCore
         self.on = false
     }
     
-    override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+    override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         super.beginTracking(touch, with: event)
         
         startTrackingValue = self.on
@@ -311,7 +311,7 @@ import QuartzCore
         return true
     }
     
-    override public func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+    override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         super.continueTracking(touch, with: event)
         
         // Get touch location
@@ -335,7 +335,7 @@ import QuartzCore
         return true
     }
     
-    override public func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+    override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         super.endTracking(touch, with: event)
 
         let previousValue = self.on
@@ -352,7 +352,7 @@ import QuartzCore
         }
     }
     
-    override public func cancelTracking(with event: UIEvent?) {
+    override open func cancelTracking(with event: UIEvent?) {
         super.cancelTracking(with: event)
         
         // just animate back to the original value
@@ -364,7 +364,7 @@ import QuartzCore
         }
     }
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         if !isAnimating {
